@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 25% 98%;
+    --foreground: 215 28% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+    --primary: 215 55% 22%;
+    --primary-foreground: 48 100% 96%;
+    --secondary: 48 85% 55%;
+    --secondary-foreground: 215 55% 22%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 15% 45%;
+    --accent: 48 85% 92%;
+    --accent-foreground: 215 55% 22%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 215 55% 22%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 215 32% 10%;
+    --foreground: 48 100% 96%;
+    --card: 215 32% 13%;
+    --card-foreground: 48 100% 96%;
+    --popover: 215 32% 13%;
+    --popover-foreground: 48 100% 96%;
+    --primary: 48 85% 60%;
+    --primary-foreground: 215 55% 15%;
+    --secondary: 215 25% 20%;
+    --secondary-foreground: 48 100% 96%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 70%;
+    --accent: 215 25% 22%;
+    --accent-foreground: 48 100% 96%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 48 85% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "ss01", "ss02";
+  }
+  html {
+    direction: rtl;
+  }
+}
+
+/* Persian numeric alignment */
+.num {
+  font-variant-numeric: tabular-nums;
+  direction: ltr;
+  unicode-bidi: embed;
+}
